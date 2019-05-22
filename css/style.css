@@ -1,7 +1,6 @@
 html, body {
-  padding: 0 80px 0 80px;
+  padding: 0 60px 0 60px;
   margin: 0;
-  background-image: url(../cover.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -11,11 +10,11 @@ html, body {
   html, body {
     padding: 0;
     background-image: none;
-
   }
 }
 /* Add a black background color to the top navigation */
 .topnav {
+  background-color: #00000054;
     white-space: nowrap;
     overflow: hidden;
     border-bottom: 2px solid black;
@@ -23,7 +22,6 @@ html, body {
 #header-home .header-img {
   height: 51px;
   float: right;
-  margin-right: 10px;
 }
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -38,6 +36,7 @@ html, body {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -89,19 +88,19 @@ a {
 /*#background*/
 @keyframes slide {
   0% {
-    background-image: url('../pic1.jpg');
+    background-image: url('https://vinhomescorp.vn/wp-content/uploads/2018/08/Vincity-Ocean-Park.jpeg');
   }
   25% {
-    background-image: url(../pic2.jpg);
+    background-image: url('https://vincity365.vn/wp-content/uploads/2019/01/Biet-thu-vincity-gia-lam.jpg');
   }
   50% {
-    background-image: url(../pic3.jpg);
+    background-image: url('http://bancanhovinhomes.info/wp-content/uploads/2017/12/Biet-thu-vinhomes-ocean-park-12.jpg');
   }
   75% {
-    background-image: url(../pic4.fid);
+    background-image: url('https://www.hotel-vakona.com/wp-content/uploads/2018/12/%C4%90i-t%C3%ACm-y%E1%BA%BFu-t%E1%BB%91-l%C3%BD-t%C6%B0%E1%BB%9Fng-t%E1%BB%AB-v%E1%BB%8B-tr%C3%AD-v%C3%A0ng-Vinhomes-Ocean-park.jpg');
   }
   100% {
-    background-image: url(../pic3.jpg);
+    background-image: url('https://i0.wp.com/ibatdongsan.co/wp-content/uploads/2018/10/Vincity-Ocean-Park-Gia-L%C3%A2m.jpg?fit=1024%2C576&ssl=1');
   }
 
 }
@@ -109,7 +108,7 @@ a {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding-top: calc(100% / 16 * 9);
+  padding-top: calc(100% / 16 * 6);
   background-size: cover;
   background-position: center center;
   animation: slide 20s infinite;
@@ -117,19 +116,28 @@ a {
 #background-home p{
   z-index: 9999999;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   text-shadow: 0.1em 0.1em #00000080;
   white-space: nowrap;
+}
+i {
+  font-size: 13px;
 }
 @media screen and (max-width: 1024px) {
   #background-home p{
     font-size: 30px;
   }
+  i {
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 812px) {
   #background-home p{
     font-size: 20px;
+  }
+  i {
+    font-size: 8px;
   }
 }
 
@@ -202,7 +210,7 @@ a {
    background-color: #00000054;
 }
 #sanpham .sanpham-res div .mau:after {
-    content:"Đặt Hàng";
+    content:"Chi tiết";
     position: relative;
     color: white;
     padding: 10px;
@@ -243,3 +251,116 @@ a {
     }
 }
 
+/*TỔNG QUAN DỰ ÁN*/
+#tongquan {
+
+}
+#tongquan p {
+  text-align: center;
+  line-height: 23px;
+}
+#review .youtube-rv {
+  width: 100%;
+  text-align: center;
+
+}
+#icon-home {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+@keyframes mymove {
+    0%  {top: 0px;}
+    50%  {top: 50px}
+    100% {top: 0px;}
+}
+#icon-home .icon-p-home {
+  width: 33.33%;
+  line-height: 23px;
+}
+#icon-home .icon-p-home > .fas {
+  font-size: 130px;
+  position: relative;
+  margin-bottom: 50px;
+  animation: mymove 3s ease infinite;
+}
+@media screen and (max-width: 1024px) {
+  #icon-home .icon-p-home > .fas {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 812px) {
+  #review .youtube-rv iframe {
+    height: 200px;
+  }
+  #icon-home {
+    display: block;
+    text-align: center;
+  }
+  #icon-home .icon-p-home {
+    width: 100%;
+    padding: 0;
+  }
+  #icon-home .icon-p-home > .fas {
+    font-size: 80px;
+  }
+}
+
+/*VỊ TRÍ DỰ ÁN*/
+#vitri {
+  text-align: center;
+  line-height: 23px;
+}
+#vitri .map {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+}
+#vitri .map img {
+  width: 49%;
+  height: 100%;
+}
+@media screen and (max-width: 812px) {
+  #vitri .map{
+    height: 170px;
+  }
+
+}
+
+/*FOOTER*/
+#footer-info {
+  display: flex;
+  line-height: 27px;
+  justify-content: space-between;
+  padding: 30px;
+}
+#footer-info .info {
+  width: 35%;
+}
+#reserved {
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: white;
+}
+input{
+  padding: 10px;
+  border-radius: 6px;
+  border: 0;
+}
+button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 0;
+}
+@media screen and (max-width: 1024px) {
+  #footer-info {
+    display: block;
+  }
+  #footer-info .info {
+    width: 100%;
+  }
+}
+
+
+  
