@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+    <link rel="stylesheet" href="css/horizontal-menu-mult.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+<title>Thông Tin Liên Hệ</title>
+  <script>
+  	function myFunction() {
+	    var x = document.getElementById("myTopnav");
+	    if (x.className === "topnav") {
+	        x.className += " responsive";
+	    } else {
+	        x.className = "topnav";
+	    }
+	}
+  </script>
+
+</head>
+
+<body>
+	<header id="header-home">
+		<div class="topnav" id="myTopnav">
+			<a class="menu" href="#">Menu</a>
+		    <a href="index.html">Trang Chủ</a>
+		    <a href="#">Tin Tức</a>
+		    <a href="thongtinlienhe.html">Liên Hệ</a>
+		    <img class="header-img" src="https://vinhomes.vn/dizi/themes/vinhome/assets/images/logo-vinhomes-white.svg">
+		    <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+	  	</div>
+	</header>
+    <div id="review-p">
+        <h2>THÔNG TIN LIÊN HỆ</h2>
+        <p><a style="color: black" href="index.html">Trang Chủ</a>  <i class="fas fa-chevron-right"></i>  <a style="color: black" href="#">Liên Hệ</a></p>
+    </div>
+    <hr>
+    <div id="info">
+        <p class="left-info">Họ Tên : </p><input class="right-info" type="text" name="name" placeholder="Họ Tên">
+        <br>
+        <p class="left-info">Email : </p><input class="right-info" type="email" name="email" placeholder="Nhập Email">
+        <br>
+        <p class="left-info">Số Điện Thoại : </p><input class="right-info" type="text" name="phone" placeholder="Số Điện Thoại">
+       <button type="submit" style="text-align: center">send</button>
+        
+    </div>
+        
+    </div>
+    <div id="footer-info" style="background-color: #00000054">
+        <div class="info">
+            <img src="https://vinhomes.vn/dizi/themes/vinhome/assets/images/logo-vinhomes-white.svg">
+            <h2>CÔNG TY CỔ PHẦN VINHOMES</h2>
+            <div><i class="fas fa-map-marker-alt"></i>   Số 458 phố Minh Khai, P. Vĩnh Tuy, Q. Hai Bà Trưng, Thành phố Hà Nội, Việt Nam.</div>
+            <a href="#"><i class="fas fa-phone"></i>   0962407056</a>
+            <br>
+            <a href="#"><i class="fas fa-blender-phone"></i>   0123456789</a>
+            <br>
+            <a href="#"><i class="fas fa-envelope"></i>   info@vinhomes.vn</a>
+            <br>
+            <a href="#"><i class="fas fa-globe-americas"></i>   https://vinhomes.vn</a>
+        </div>
+        <div class="info">
+            <h2>ĐĂNG KÍ NHẬN TIN</h2>
+            <P>Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của Vinhomes tới quý khách</P>
+            <input type="email" name="thongtin" placeholder="Nhập email của bạn">
+            <button>send</button>
+        </div>
+    </div>
+    <footer id="reserved">Copyright © 2019 VINHOMES. All Right Reserved Một thành viên của Tập đoàn Vingroup Điều khoản Sitemap</footer>
+</body>
+
+</html>
