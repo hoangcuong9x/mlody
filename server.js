@@ -1,67 +1,19 @@
-var http = require('http');
-var fs = require('fs');
-var path = require('path');
- 
+var express = require("express");
+var app = express();
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.use(express.static(__dirname + '/public'));
+app.listen(3000);
 
-var server = http.createServer(function(request, response){
-
-	var filePath = '.' + request.url;
-    if (filePath == './') {
-        filePath = './views/index.html';
-  
-
-    }
-
-    var extname = path.extname(filePath);
-    var contentType = 'text/html';
-    switch (extname) {
-        case '.js':
-            contentType = 'text/javascript';
-            break;
-        case '.css':
-            contentType = 'text/css';
-            break;
-        case '.json':
-            contentType = 'application/json';
-            break;
-        case '.png':
-            contentType = 'image/png';
-            break;      
-        case '.jpg':
-            contentType = 'image/jpg';
-            break;
-        case '.wav':
-            contentType = 'audio/wav';
-            break;
-    }
-
-    if (contentType == 'text/html') {
-    	let paths = filePath.split('/');
-    	filePath = './views/' + paths[paths.length - 1];
-    	console.log(filePath)
-    }
-
-    fs.readFile(filePath, function(error, content) {
-        if (error) {
-            if(error.code == 'ENOENT'){
-                fs.readFile('./views/404.html', function(error, content) {
-                    response.writeHead(200, { 'Content-Type': contentType });
-                    response.end(content, 'utf-8');
-                });
-            }
-            else {
-                response.writeHead(500);
-                response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
-                response.end(); 
-            }
-        }
-        else {
-            response.writeHead(200, { 'Content-Type': contentType });
-            response.end(content, 'utf-8');
-        }
-    });
+app.get("/index", function(req, res){
+	res.render("index");
 });
-
-server.listen(3000, function(){
-    console.log('Connected Successfull!');
+app.get("/vitri", function(req, res){
+	res.render("vitri");
+});
+app.get("/tongquan", function(req, res){
+	res.render("tongquan");
+});
+app.get("/lienhe", function(req, res){
+	res.render("thongtinlienhe");
 });
