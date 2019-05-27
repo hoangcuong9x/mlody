@@ -42,17 +42,16 @@
         <p><a style="color: black" href="index">Trang Chủ</a>  <i class="fas fa-chevron-right"></i>  <a style="color: black" href="#">Liên Hệ</a></p>
     </div>
     <hr>
-    <div id="info">
-        <p class="left-info">Họ Tên : </p><input class="right-info" type="text" name="name" placeholder="Họ Tên">
+    <form id="info" action="http://localhost:3000/mail" method="POST">
+        <p class="left-info">Họ Tên : </p><input class="right-info" type="text" name="ten" placeholder="Họ Tên">
         <br>
-        <p class="left-info">Email : </p><input class="right-info" type="email" name="email" placeholder="Nhập Email">
+        <p class="left-info">Email : </p><input class="right-info" type="text" name="email" placeholder="Nhập Email">
         <br>
         <p class="left-info">Số Điện Thoại : </p><input class="right-info" type="text" name="phone" placeholder="Số Điện Thoại">
-       <button type="submit" style="text-align: center">send</button>
+       <br>
+       <input type="submit" value="Send!">
+    </form>
         
-    </div>
-        
-    </div>
     <div id="footer-info" style="background-color: #00000054">
         <div class="info">
             <img src="https://vinhomes.vn/dizi/themes/vinhome/assets/images/logo-vinhomes-white.svg">
