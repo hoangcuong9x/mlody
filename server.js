@@ -17,6 +17,6 @@ app.get("/vitri", function(req, res){
 app.get("/tongquan", function(req, res){
 	res.render("tongquan");
 });
-app.get("/lienhe", function(req, res){
+app.get("/thongtinlienhe", function(req, res){
 	res.render("thongtinlienhe");
 });
