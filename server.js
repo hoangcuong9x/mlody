@@ -3,7 +3,7 @@ var app = express();
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.static(__dirname + '/public'));
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 app.get("/index", function(req, res){
 	res.render("index");
